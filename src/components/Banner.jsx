@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import Typewriter from "typewriter-effect";
 
 // Image
-import profilePic from "../assets/profilePic.png";
+import profilePic from "../../public/assets/profilePic.png";
 
 // react icons
 // import { SiGmail } from "react-icons/si";

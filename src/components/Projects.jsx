@@ -1,10 +1,69 @@
 import React from 'react'
-import { content } from '../contents/Content';
 
 import { Link } from 'react-router-dom';
 
+// projects
+import project1 from "../assets/images/Projects/weatherApi.png";
+import project2 from "../assets/images/projects/movieApi.png";
+import project3 from "../assets/images/projects/taskTracker.png";
+import project4 from "../assets/images/projects/chatApp.png";
+import project5 from "../assets/images/projects/noteTaking.png";
+import project6 from "../assets/images/projects/collegeWebsite.png";
+
+
+const projects = {
+    title: "Projects",
+    subtitle: "These Are My Work",
+    project_content: [
+        {
+            title: "Live Weather API",
+            image: project1,
+            project_detail_link: '/projectdetail',
+            live_url_link: 'https://current-weather-api-4.netlify.app/'
+        },
+        {
+            title: "Hollywood Movie API",
+            image: project2,
+            project_detail_link: '/projectdetail',
+            live_url_link: 'https://react-movie-api88.netlify.app/'
+        },
+        {
+            title: "Task Tracker - TODO",
+            image: project3,
+            project_detail_link: '/projectdetail',
+            live_url_link: 'https://task-tracker-cb.netlify.app/'
+        },
+        {
+            title: "Note Taking",
+            image: project4,
+            project_detail_link: '/projectdetail',
+            live_url_link: 'https://63d4113c8864f5263af4c1a4--mychatapp-react.netlify.app/'
+        },
+        {
+            title: "Chat App",
+            image: project5,
+            project_detail_link: '/projectdetail',
+            live_url_link: 'https://note-taking-app-react-88.netlify.app/'
+        },
+        {
+            title: "College Website",
+            image: project6,
+            project_detail_link: '/projectdetail',
+            live_url_link: 'https://college-wgt-test.000webhostapp.com/'
+        },
+        // {
+        //   title: "My First Portfolio",
+        //   image: project7,
+        //   project_detail_link: '/projectdetail',
+        //   live_url_link: 'https://mypersonalportfolioapp.netlify.app/'
+        // },
+    ],
+}
+
+
+
 const Projects = () => {
-    const { projects } = content;
+
     return (
         <div id='projects' className='md:py-0 py-5'>
             <div className='md:py-4 py-5'>

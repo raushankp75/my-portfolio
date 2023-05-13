@@ -56,3 +56,10 @@ html {
         @apply md:text-2xl text-xl !leading-relaxed font-Paprika text-gray-400
       }
     }
+
+
+
+    .toast-position {
+      bottom: 8rem !important;
+      z-index: 10000000000;
+    }

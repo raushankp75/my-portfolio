@@ -1,12 +1,58 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { content } from '../contents/Content';
 import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+// import toast, { Toaster } from 'react-hot-toast';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { HiChevronDoubleUp } from 'react-icons/hi'
 
 
 const Contact = () => {
     const { contact } = content;
+
+    const form = useRef();
+
+
+    // Send Email
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        // you can add keys in env file
+        emailjs.sendForm('service_rl0tkko', 'template_c5jo9df', form.current, 'iDYEOqmDfenlrJhOn')
+            .then((result) => {
+                console.log(result.text);
+                // clear all input field values
+                form.current.reset();
+                // success toast message
+                message('Email send successfully!');
+            }, (error) => {
+                console.log(error.text);
+                toast.error(error.text);
+                message('Server problem try after some time!');
+            });
+    };
+
+
+
+
+    /* message */
+    const message = (Test) => {
+        // alert('Data added successfully!');
+        if (Test) {
+            // console.log('here');
+            toast.success('Email send successfully!', {
+                position: "top-center"
+            });
+        } else {
+            toast.error('Server problem try after some time!', {
+                position: "top-center"
+            });
+        }
+
+    }
+
 
     return (
         <div id='contact' className='w-full mt-10'>
@@ -20,26 +66,26 @@ const Contact = () => {
                     {/* left */}
                     <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
                         <div className='p-4'>
-                            <form>
+                            <form ref={form} onSubmit={sendEmail} >
                                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                                     <div className='flex flex-col' data-aos="fade-down">
                                         <label htmlFor="name" className='uppercase text-sm py-2 font-semibold'>Name</label>
-                                        <input type="text" id='name' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
+                                        <input name='from_name' type="text" id='name' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
                                     </div>
                                     <div className='flex flex-col' data-aos="fade-up">
                                         <label htmlFor="phone" className='uppercase text-sm py-2 font-semibold'>Phone Number</label>
-                                        <input type="text" id='phone' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
+                                        <input name='mobile' type="text" id='phone' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
                                     </div>
                                 </div>
 
                                 <div className='flex flex-col py-2' data-aos="fade-down">
                                     <label htmlFor="email" className='uppercase text-sm py-2 font-semibold'>Email</label>
-                                    <input type="email" id='phone' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
+                                    <input name='user_email' type="email" id='phone' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
                                 </div>
 
                                 <div className='flex flex-col py-2' data-aos="fade-up">
                                     <label htmlFor="subject" className='uppercase text-sm py-2 font-semibold'>Subject</label>
-                                    <input type="text" id='subject' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
+                                    <input name='title' type="text" id='subject' className='border-2 rounded-lg p-3 flex border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600' />
                                 </div>
 
                                 <div className='flex flex-col py-2' data-aos="fade-down">
@@ -50,10 +96,9 @@ const Contact = () => {
                                 <div className='py-8' data-aos="fade-left">
                                     <button className='py-3 px-10 font-bold tracking-widest'>Send</button>
                                 </div>
+
                             </form>
-
                         </div>
-
                     </div>
 
 
@@ -80,10 +125,24 @@ const Contact = () => {
             <div data-aos="fade-up" className='flex justify-center py-12'>
                 <a href='/'>
                     <div className='rounded-full shadow-xl shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <HiChevronDoubleUp size={30} className='text-gray-500'/>
+                        <HiChevronDoubleUp size={30} className='text-gray-500' />
                     </div>
                 </a>
             </div>
+            <ToastContainer
+                className="toast-position"
+                position="bottom-right"
+                autoClose={10000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
+
         </div>
     )
 }

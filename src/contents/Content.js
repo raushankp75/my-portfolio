@@ -153,6 +153,7 @@ export const content = {
     ],
   },
 
+  
   contact: {
     title: "Contact Me",
     subtitle: "Send a message to me",

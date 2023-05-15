@@ -9,7 +9,7 @@ const Portfolio = () => {
     return (
         <>
             <Banner />
-            <div className='md:px-32 md:py-10 px-5 py-5 bg-blue-100'>
+            <div className='md:px-32 md:py-10 px-3 py-5 bg-blue-100'>
                 <About />
                 <Skills />
                 <Projects />

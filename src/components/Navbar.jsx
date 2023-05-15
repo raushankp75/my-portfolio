@@ -37,7 +37,7 @@ const Navbar = () => {
     <div className= {shadow ? 'fixed w-full h-20 z-[10000] bg-blue-200 shadow-md' : 'fixed w-full h-20 z-[10000] bg-blue-200'}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         {/* <p className="text-3xl font-semibold">Raushan Kumar</p> */}
-        <div className="flex items-center justify-between p-4 w-[60%] sm:w-[25%]">
+        <div className="flex items-center justify-between p-4 md:w-[20%] w-[60%]">
           <Link to='https://github.com/raushankp75' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
             <AiFillGithub />
           </Link>
@@ -47,9 +47,9 @@ const Navbar = () => {
           <Link to='https://wa.me/7079907765' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
             <AiOutlineWhatsApp />
           </Link>
-          <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+          <Link to='tel:+917079907765' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
             <AiFillPhone />
-          </div>
+          </Link>
         </div>
 
         {/* navlink */}
@@ -94,8 +94,8 @@ const Navbar = () => {
         <div
           className={
             navMenu
-              ? "fixed left-0 top-0 w-[75%] sm:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+              : "fixed left-[-110%] top-0 p-10 ease-in duration-500"
           }
         >
           <div>

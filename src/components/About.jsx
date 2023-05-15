@@ -38,7 +38,7 @@ const About = () => {
 
             <div  className=' flex md:flex-row flex-col justify-between gap-x-10 gap-y-10 pt-5'>
                 {/* first */}
-                <div data-aos="slide-right" className='flex flex-col gap-y-4'>
+                <div data-aos="slide-up" className='flex flex-col gap-y-4'>
                     <p className='tracking-wide md:text-xl text-base text-justify'>Hi, I'm Raushan Kumar, a Web Developer and Professional in UI design at Frontend Side. I have Created minimal Frontend which is more attractive and usefull. I have always looking for new and innovative ways to bring my client's visions to life.</p>
                     <p className='tracking-wide md:text-xl text-base text-justify'>Basically i'm currently a MCA student. I have learned and explored a lot by myself in less time in college time.</p>
                     <p className='tracking-wide md:text-xl text-base text-justify'>I am currently working on MERN Stack Technology, which is use to create more modern website and also reduce load time.</p>
@@ -46,13 +46,13 @@ const About = () => {
                 </div>
 
                 {/* second */}
-                <div data-aos="slide-left" className='col-span-2 flex md:flex-col flex-row items-end justify-between md:w-[50%] w-[90%]'>
-                    <div className='flex flex-col items-end justify-center'>
-                        <span className='inline-block md:text-7xl text-5xl font-bold'><AnimatedNumbers value={10} />+</span>
+                <div className='col-span-2 flex flex-col gap-5 items-end justify-between md:w-[50%] w-[90%]'>
+                    <div data-aos="slide-right"  className='flex flex-col items-end justify-center'>
+                        <span className='inline-block md:text-7xl text-3xl font-bold'><AnimatedNumbers value={10} />+</span>
                         <h3 className='md:text-xl text-base font-medium capitalize text-black/75'>Projects Completed</h3>
                     </div>
-                    <div className='flex flex-col items-end justify-center'>
-                        <span className='inline-block md:text-7xl text-5xl font-bold'><AnimatedNumbers value={6} />+</span>
+                    <div data-aos="slide-left"  className='flex flex-col items-end justify-center'>
+                        <span className='inline-block md:text-7xl text-3xl font-bold'><AnimatedNumbers value={6} />+</span>
                         <h3 className='md:text-xl text-base font-medium capitalize text-black/75'>Months Of Experience</h3>
                     </div>
                 </div>

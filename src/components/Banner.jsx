@@ -38,10 +38,10 @@ const Banner = () => {
         </div>
 
         <div className="flex flex-row md:gap-x-10 gap-x-5 md:px-10 px-4">
-          <Link to="https://drive.google.com/file/d/1w2IxTGsz1n1moWpvq6TlTTHNilMNVi_G/view?usp=sharing">
+          <Link to="https://drive.google.com/file/d/1BEbFdg9eLBgu72n8KQ_gHii7p2lQnrPT/view?usp=sharing">
             <button className="px-6 py-1">Resume</button>
           </Link>
-          <Link to="mailto:https://raushankp75@gmail.com">
+          <Link to="mailto:raushankp75@gmail.com">
             <button className="px-6 py-1">Mail</button>
           </Link>
         </div>

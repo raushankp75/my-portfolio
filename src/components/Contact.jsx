@@ -93,7 +93,7 @@ const Contact = () => {
                                     <textarea name="message" id="message" rows="5" className='border-2 rounded-lg p-3 border-x-gray-300 outline-none border-blue-300 focus:border-2 focus:border-blue-600 active:bottom-2 active:border-b-blue-600'></textarea>
                                 </div>
 
-                                <div className='py-8' data-aos="fade-left">
+                                <div className='py-8' data-aos="fade-up">
                                     <button className='py-3 px-10 font-bold tracking-widest'>Send</button>
                                 </div>
 

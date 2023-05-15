@@ -3,11 +3,7 @@ import {Link} from "react-router-dom";
 
 // react icons
 import { RiMenu3Fill } from "react-icons/ri";
-import { AiFillCloseCircle } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
-import { AiFillLinkedin } from "react-icons/ai";
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { AiFillPhone } from "react-icons/ai";
+import { IoClose } from "react-icons/io5";
 
 
 const Navbar = () => {
@@ -35,22 +31,8 @@ const Navbar = () => {
 
   return (
     <div className= {shadow ? 'fixed w-full h-20 z-[10000] bg-blue-200 shadow-md' : 'fixed w-full h-20 z-[10000] bg-blue-200'}>
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        {/* <p className="text-3xl font-semibold">Raushan Kumar</p> */}
-        <div className="flex items-center justify-between p-4 md:w-[20%] w-[60%]">
-          <Link to='https://github.com/raushankp75' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <AiFillGithub />
-          </Link>
-          <Link to='https://www.linkedin.com/in/raushankumar75/' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <AiFillLinkedin />
-          </Link>
-          <Link to='https://wa.me/7079907765' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <AiOutlineWhatsApp />
-          </Link>
-          <Link to='tel:+917079907765' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-            <AiFillPhone />
-          </Link>
-        </div>
+      <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
+        <p className="text-2xl font-semibold uppercase tracking-widest">Portfolio</p>
 
         {/* navlink */}
         <div>
@@ -77,8 +59,8 @@ const Navbar = () => {
           </ul>
 
           {/* Hamburger icon - mobile */}
-          <div onClick={handleNavMenu} className="md:hidden cursor-pointer">
-            <RiMenu3Fill size={25} />
+          <div onClick={handleNavMenu} className="md:hidden cursor-pointer text-green-600 drop-shadow-xl hover:duration-200 hover:scale-95 hover:translate-y-1 active:duration-200 active:scale-95 active:translate-y-2">
+            <RiMenu3Fill size={36} />
           </div>
         </div>
       </div>
@@ -105,9 +87,9 @@ const Navbar = () => {
               {/* close icon - mobile */}
               <div
                 onClick={handleNavMenu}
-                className="rounded-full shadow-lg shadow-gray-400 cursor-pointer"
+                className="rounded-md  shadow-gray-400 cursor-pointer bg-gray-300 text-green-600 drop-shadow-xl hover:duration-200 hover:scale-95 hover:translate-y-1 active:duration-200 active:scale-95 active:translate-y-2"
               >
-                <AiFillCloseCircle size={25} />
+                <IoClose size={33} />
               </div>
             </div>
           </div>

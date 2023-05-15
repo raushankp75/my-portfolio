@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // external libraries
 import Typewriter from "typewriter-effect";
@@ -10,6 +10,10 @@ import profilePic from "../../public/assets/profilePic.png";
 // react icons
 // import { SiGmail } from "react-icons/si";
 // import { IoDocumentAttachSharp } from "react-icons/io";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { AiFillPhone } from "react-icons/ai";
 
 
 const Banner = () => {
@@ -21,8 +25,23 @@ const Banner = () => {
 
   return (
     <div id="/" className="md:min-h-[70vh] min-h-[80vh] w-full flex md:flex-row flex-col gap-x-8 items-center justify-between md:pt-12 pt-24 md:px-72 px-5 text-center bg-blue-200">
+      <div className="flex items-center justify-between gap-10 p-3">
+        <Link to='https://github.com/raushankp75' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+          <AiFillGithub />
+        </Link>
+        <Link to='https://www.linkedin.com/in/raushankumar75/' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+          <AiFillLinkedin />
+        </Link>
+        <Link to='https://wa.me/7079907765' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+          <AiOutlineWhatsApp />
+        </Link>
+        <Link to='tel:+917079907765' className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+          <AiFillPhone />
+        </Link>
+      </div>
+
       {/* left */}
-      <div data-aos="slide-right" className="flex flex-col gap-y-12">
+      <div data-aos="slide-right" className="flex flex-col gap-y-8">
         <div className="flex flex-col gap-y-5 max-w-[600px] md:mx-10 mx-4  my-0">
           <div className=" bg-clip-text text-blue-600 md:text-[34px] text-2xl font-semibold">
             <Typewriter

@@ -4,12 +4,9 @@ import { Link } from "react-router-dom";
 // external libraries
 import Typewriter from "typewriter-effect";
 
-// Image
-import profilePic from "../../public/assets/profilePic.png";
+
 
 // react icons
-// import { SiGmail } from "react-icons/si";
-// import { IoDocumentAttachSharp } from "react-icons/io";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
@@ -17,6 +14,9 @@ import { AiFillPhone } from "react-icons/ai";
 
 
 const Banner = () => {
+
+  // images
+  const profilePic = "https://drive.google.com/uc?export=view&id=1H3UdTp3tuZyN0MyT12qZx8w_wGco6iDF"
 
   // for autotyping text
   const [state] = useState({
